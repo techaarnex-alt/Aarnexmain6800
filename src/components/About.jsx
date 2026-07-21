@@ -8,11 +8,10 @@ const vals = [
 ];
 
 const timeline = [
-  {yr:'2017',title:'Founded in Noida, India',desc:'Started as a 5-member web studio focused on Indian SME clients.'},
-  {yr:'2019',title:'Cloud & Mobile Expansion',desc:'Launched cloud and mobile divisions; crossed 50 enterprise clients.'},
-  {yr:'2021',title:'AI/ML Practice Launched',desc:'Dedicated AI team; first ML product delivered for healthcare.'},
-  {yr:'2023',title:'Global Operations',desc:'Expanded to UAE, UK, and Singapore. 60+ specialists strong.'},
-  {yr:'2025',title:'150+ Projects Delivered',desc:'12+ countries, 98% client satisfaction rate and growing.'},
+  {yr:'2023',title:'Founded in Lucknow, India',desc:'Started as a 5-member web studio focused on Indian SME clients.'},
+  {yr:'2024',title:'Cloud & Mobile Expansion',desc:'Launched cloud and mobile divisions; crossed 50 enterprise clients.'},
+  {yr:'2025',title:'AI/ML Practice Launched',desc:'Dedicated AI team; first ML product delivered for healthcare.'},
+  {yr:'2026',title:'150+ Projects Delivered',desc:'12+ countries, 98% client satisfaction rate and growing.'},
 ];
 
 const pills = ['Software Engineering','Cloud Architecture','AI / ML','Cybersecurity','Mobile Dev','UI/UX Design','DevOps','Data Science'];

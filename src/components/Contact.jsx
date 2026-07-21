@@ -1,9 +1,10 @@
+import {FaYoutube} from"react-icons/fa";
 import { useEffect, useRef, useState } from 'react';
 
 const infos = [
-  {ico:'📧',label:'Email',val:'aarnextech@gmail.com'},
-  {ico:'📞',label:'Phone',val:'+91 98765 43210'},
-  {ico:'💼',label:'LinkedIn',val:'linkedin.com/company/arnextech'},
+  {ico:'📧',label:'Email',val:'techaarnex@gmail.com'},
+  {ico:'📞',label:'Phone',val:'+91 88537 08777'},
+  {ico:<FaYoutube color="red" size={22}/>,label:'YouTube',val:'http://www.youtube.com/@AarnexTech'},
   {ico:'⏱️',label:'Response Time',val:'Within 24 hours — guaranteed'},
 ];
 
@@ -56,7 +57,7 @@ export default function Contact() {
 
           <div style={{background:'#0d1a2e',border:'1px solid rgba(0,200,255,.08)',borderRadius:'12px',padding:'1.1rem 1.4rem'}}>
             <div style={{fontFamily:'Rajdhani,sans-serif',fontSize:'.6rem',fontWeight:700,textTransform:'uppercase',letterSpacing:'.14em',color:'#2a3a50',marginBottom:'.45rem'}}>🏢 Head Office</div>
-            <p style={{fontSize:'.8rem',color:'#4a6080',lineHeight:1.7,fontWeight:300}}>Tower B, Sector 62, Noida — 201301<br/>Uttar Pradesh, India</p>
+            <p style={{fontSize:'.8rem',color:'#4a6080',lineHeight:1.7,fontWeight:300}}>Sector 19 Vrindavan Yojana,Lucknow<br/>Uttar Pradesh, India</p>
           </div>
         </div>
 
