@@ -46,7 +46,18 @@ export default function Hero() {
       <div style={{position:'absolute',top:'-10%',right:'-5%',width:'55vw',height:'55vw',maxWidth:'650px',maxHeight:'650px',background:'radial-gradient(circle,rgba(0,120,255,.07) 0%,transparent 65%)',pointerEvents:'none'}}/>
       <div ref={dotsRef} style={{position:'absolute',inset:0,overflow:'hidden',pointerEvents:'none'}}/>
 
-      <div style={{position:'relative',zIndex:2,display:'grid',gridTemplateColumns:'1fr 420px',gap:'3.5rem',alignItems:'center',padding:'5rem 0 4rem'}}>
+      <div
+  className="hero-grid"
+  style={{
+    position: 'relative',
+    zIndex: 2,
+    display: 'grid',
+    gridTemplateColumns: '1fr 420px',
+    gap: '3.5rem',
+    alignItems: 'center',
+    padding: '5rem 0 4rem'
+  }}
+>
         {/* LEFT */}
         <div>
           <div style={{display:'inline-flex',alignItems:'center',gap:'.6rem',background:'rgba(0,200,255,.08)',border:'1px solid rgba(0,200,255,.18)',borderRadius:'100px',padding:'.3rem .9rem .3rem .45rem',fontSize:'.65rem',color:'#80e0ff',letterSpacing:'.12em',textTransform:'uppercase',fontWeight:600,marginBottom:'1.8rem',fontFamily:'Rajdhani,sans-serif'}}>

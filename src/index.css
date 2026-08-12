@@ -23,3 +23,174 @@ a{text-decoration:none;color:inherit}
 .sec-title .gr{background:linear-gradient(110deg,var(--c1),#4fa8ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .sec-sub{font-size:.9rem;color:var(--t3);line-height:1.82;max-width:460px;font-weight:300}
 .ld{height:1px;background:linear-gradient(90deg,transparent,var(--b2) 25%,var(--b2) 75%,transparent);margin:0 5%}
+
+/* ================================
+   MOBILE RESPONSIVE FIX
+   ================================ */
+
+@media (max-width: 768px) {
+
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden !important;
+  }
+
+  #root {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden !important;
+  }
+
+  /* All sections must fit the screen */
+  section {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* Main containers */
+  .container {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Hero section */
+  .hero {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    overflow: hidden;
+  }
+
+  /* Make hero columns stack on mobile */
+  .hero-container {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Hero content */
+  .hero-content {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Hero heading */
+  .hero h1 {
+    width: 100%;
+    max-width: 100%;
+    font-size: clamp(40px, 11vw, 58px) !important;
+    line-height: 1.05;
+    overflow-wrap: break-word;
+  }
+
+  /* Hero paragraph */
+  .hero p {
+    width: 100%;
+    max-width: 100%;
+    font-size: 17px;
+    line-height: 1.65;
+  }
+
+  /* Buttons */
+  .hero-buttons {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero-buttons a,
+  .hero-buttons button {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Right-side visual/services panel */
+  .hero-visual {
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+    left: auto;
+    right: auto;
+    transform: none;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /* Prevent images from overflowing */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Text should never create horizontal overflow */
+  h1,
+  h2,
+  h3,
+  h4,
+  p {
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+}
+
+
+/* ================================
+   SMALL MOBILE PHONES
+   ================================ */
+
+@media (max-width: 480px) {
+
+  .container,
+  .hero {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .hero h1 {
+    font-size: 42px !important;
+  }
+
+  .hero p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .hero-buttons a,
+  .hero-buttons button {
+    width: 100%;
+  }
+}
+
+/* ===== HERO MOBILE FIX ===== */
+
+@media (max-width: 768px) {
+  .hero-grid {
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    gap: 2rem !important;
+    padding: 3rem 0 2rem !important;
+  }
+
+  .hero-grid > div {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+    padding: 2rem 0 !important;
+  }
+}
