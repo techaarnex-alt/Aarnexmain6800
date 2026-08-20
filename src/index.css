@@ -1,0 +1,943 @@
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Exo 2',sans-serif;background:#060d1a;color:#e4eeff;overflow-x:hidden;-webkit-font-smoothing:antialiased;line-height:1.6}
+a{text-decoration:none;color:inherit}
+::selection{background:rgba(0,200,255,.3);color:#fff}
+
+:root{
+  --bg0:#060d1a; --bg1:#080f1e; --bg2:#0b1528; --bg3:#0e1a30;
+  --card:#0d1a2e; --cardh:#112035;
+  --c1:#00c8ff; --c2:#00a8e8; --c3:#0077cc; --c4:#80e0ff; --c5:#b8f0ff;
+  --ca08:rgba(0,200,255,.08); --ca15:rgba(0,200,255,.15); --ca25:rgba(0,200,255,.25);
+  --t1:#e4eeff; --t2:#9ab0cc; --t3:#4a6080; --t4:#2a3a50;
+  --b1:rgba(0,200,255,.08); --b2:rgba(0,200,255,.18); --b3:rgba(0,200,255,.35);
+}
+
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.reveal.on{opacity:1;transform:none}
+.d1{transition-delay:.09s}.d2{transition-delay:.18s}.d3{transition-delay:.27s}
+
+.eyebrow{display:inline-flex;align-items:center;gap:.5rem;font-family:'Rajdhani',sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--c1);margin-bottom:1rem}
+.eyebrow::before{content:'';width:20px;height:2px;background:linear-gradient(90deg,var(--c2),var(--c1));border-radius:2px}
+.sec-title{font-family:'Rajdhani',sans-serif;font-size:clamp(1.8rem,3vw,3rem);font-weight:700;line-height:1.1;letter-spacing:.01em;color:var(--t1);margin-bottom:.9rem}
+.sec-title .gr{background:linear-gradient(110deg,var(--c1),#4fa8ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.sec-sub{font-size:.9rem;color:var(--t3);line-height:1.82;max-width:460px;font-weight:300}
+.ld{height:1px;background:linear-gradient(90deg,transparent,var(--b2) 25%,var(--b2) 75%,transparent);margin:0 5%}
+
+/* ================================
+   MOBILE RESPONSIVE FIX
+   ================================ */
+
+@media (max-width: 768px) {
+
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden !important;
+  }
+
+  #root {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden !important;
+  }
+
+  /* All sections must fit the screen */
+  section {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* Main containers */
+  .container {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Hero section */
+  .hero {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    overflow: hidden;
+  }
+
+  /* Make hero columns stack on mobile */
+  .hero-container {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Hero content */
+  .hero-content {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Hero heading */
+  .hero h1 {
+    width: 100%;
+    max-width: 100%;
+    font-size: clamp(40px, 11vw, 58px) !important;
+    line-height: 1.05;
+    overflow-wrap: break-word;
+  }
+
+  /* Hero paragraph */
+  .hero p {
+    width: 100%;
+    max-width: 100%;
+    font-size: 17px;
+    line-height: 1.65;
+  }
+
+  /* Buttons */
+  .hero-buttons {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero-buttons a,
+  .hero-buttons button {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Right-side visual/services panel */
+  .hero-visual {
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+    left: auto;
+    right: auto;
+    transform: none;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /* Prevent images from overflowing */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Text should never create horizontal overflow */
+  h1,
+  h2,
+  h3,
+  h4,
+  p {
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+}
+
+
+/* ================================
+   SMALL MOBILE PHONES
+   ================================ */
+
+@media (max-width: 480px) {
+
+  .container,
+  .hero {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .hero h1 {
+    font-size: 42px !important;
+  }
+
+  .hero p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .hero-buttons a,
+  .hero-buttons button {
+    width: 100%;
+  }
+}
+
+/* ===== HERO MOBILE FIX ===== */
+
+@media (max-width: 768px) {
+  .hero-grid {
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    gap: 2rem !important;
+    padding: 3rem 0 2rem !important;
+  }
+
+  .hero-grid > div {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+    padding: 2rem 0 !important;
+  }
+}
+
+/* =========================================
+   FINAL RESPONSIVE FIX
+   ========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* =========================================
+   LAPTOP
+   ========================================= */
+
+@media (max-width: 1200px) {
+
+  .container {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+
+  /* Any 3-column layout becomes 2 columns */
+  .services-grid,
+  .service-grid,
+  .services-list,
+  .cards-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 768px) {
+
+  /* ---------- GENERAL ---------- */
+
+  section {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+
+  /* ---------- SERVICES ---------- */
+
+  .services-grid,
+  .service-grid,
+  .services-list,
+  .cards-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+
+  /* ---------- SERVICE CARDS ---------- */
+
+  .service-card,
+  .services-grid > *,
+  .service-grid > *,
+  .services-list > *,
+  .cards-grid > * {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+
+  /* ---------- ABOUT ---------- */
+
+  .about-grid,
+  .about-container,
+  .about-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+
+  /* If About uses a 2-column grid */
+  .about-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+
+  /* ---------- JOURNEY ---------- */
+
+  .journey,
+  .journey-grid,
+  .timeline,
+  .timeline-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+
+  /* ---------- FEATURES ---------- */
+
+  .features-grid,
+  .feature-grid {
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+
+  /* ---------- STATS ---------- */
+
+  .stats {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+
+  /* ---------- TEXT ---------- */
+
+  h1,
+  h2,
+  h3,
+  h4,
+  p {
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+
+  /* ---------- FLEX ELEMENTS ---------- */
+
+  .about-grid,
+  .about-container,
+  .services-header,
+  .section-header {
+    min-width: 0;
+  }
+
+}
+
+
+/* =========================================
+   SMALL PHONES
+   ========================================= */
+
+@media (max-width: 480px) {
+
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  h1 {
+    font-size: 38px !important;
+  }
+
+  h2 {
+    font-size: 30px !important;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+}
+
+/* =========================================================
+   FINAL MOBILE RESPONSIVE FIX
+   Put this at the VERY END of index.css
+   ========================================================= */
+
+/* Prevent every element from becoming wider than the screen */
+html,
+body,
+#root {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden !important;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Images/videos never overflow */
+img,
+video,
+svg,
+canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Flex/grid children are allowed to shrink */
+.container,
+.hero,
+.hero-container,
+.hero-content,
+.hero-visual,
+section,
+header,
+footer,
+nav,
+main,
+div {
+  min-width: 0;
+}
+
+/* Long text must wrap */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+button {
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+/* =========================================================
+   TABLET + MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden !important;
+  }
+
+  #root {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden !important;
+  }
+
+  /* Main containers */
+  .container {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  section {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  /* =======================================================
+     NAVBAR
+     ======================================================= */
+
+  nav,
+  header {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  /* Keep navbar content inside screen */
+  nav > div,
+  header > div {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  /* =======================================================
+     HERO
+     ======================================================= */
+
+  .hero {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    overflow: hidden !important;
+  }
+
+  .hero-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 30px !important;
+  }
+
+  .hero-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: none !important;
+  }
+
+  .hero-visual {
+    width: 100% !important;
+    max-width: 100% !important;
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;
+    margin: 0 !important;
+    flex: none !important;
+  }
+
+  .hero h1 {
+    width: 100% !important;
+    max-width: 100% !important;
+    font-size: clamp(34px, 10vw, 48px) !important;
+    line-height: 1.08 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .hero p {
+    width: 100% !important;
+    max-width: 100% !important;
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+  }
+
+  .hero-buttons {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 12px !important;
+  }
+
+  .hero-buttons a,
+  .hero-buttons button {
+    max-width: 100% !important;
+  }
+
+  /* =======================================================
+     GRIDS / CARDS
+     ======================================================= */
+
+  .grid,
+  .cards,
+  .services-grid,
+  .about-grid,
+  .process-grid,
+  .contact-grid {
+    width: 100% !important;
+    max-width: 100% !important;
+    grid-template-columns: 1fr !important;
+  }
+
+  .card,
+  .service-card,
+  .about-card,
+  .process-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  /* =======================================================
+     ALL COMMON FLEX CONTAINERS
+     ======================================================= */
+
+  .row,
+  .flex,
+  .section-content,
+  .about-content,
+  .services-content,
+  .process-content,
+  .contact-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  /* =======================================================
+     BUTTONS
+     ======================================================= */
+
+  button,
+  .btn,
+  .button {
+    max-width: 100%;
+  }
+
+  /* =======================================================
+     FORMS
+     ======================================================= */
+
+  input,
+  textarea,
+  select {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  form {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* =======================================================
+     TICKER
+     ======================================================= */
+
+  .ticker,
+  .ticker-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+  }
+
+  /* =======================================================
+     FOOTER
+     ======================================================= */
+
+  footer {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+  }
+
+  footer > div {
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  /* Footer columns stack */
+  footer .footer-grid,
+  footer .footer-content,
+  footer .footer-columns {
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* =======================================================
+     LARGE DECORATIVE ELEMENTS
+     ======================================================= */
+
+  .hero-visual *,
+  .hero-content *,
+  section * {
+    max-width: 100%;
+  }
+
+  /* Don't allow fixed-width elements to create overflow */
+  .hero-visual img,
+  .hero img,
+  section img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  .container {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .hero {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .hero-container {
+    gap: 24px !important;
+  }
+
+  .hero h1 {
+    font-size: 38px !important;
+    line-height: 1.08 !important;
+  }
+
+  .hero p {
+    font-size: 15px !important;
+    line-height: 1.55 !important;
+  }
+
+  .hero-buttons {
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+
+  .hero-buttons a,
+  .hero-buttons button {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+
+  /* Smaller section headings */
+  .sec-title {
+    font-size: 30px !important;
+    line-height: 1.15 !important;
+  }
+
+  .sec-sub {
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+  }
+
+  /* Prevent code/long strings from breaking layout */
+  pre,
+  code {
+    max-width: 100% !important;
+    overflow-x: auto !important;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+  .container,
+  .hero {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+  .hero h1 {
+    font-size: 34px !important;
+  }
+
+  .hero p {
+    font-size: 14px !important;
+  }
+
+  .sec-title {
+    font-size: 27px !important;
+  }
+}
+
+/* =========================================================
+   COMPONENT-LEVEL MOBILE LAYOUT
+   Inline desktop styles are intentionally overridden here.
+   ========================================================= */
+.nav-toggle {
+  display: none;
+  border: 0;
+  background: transparent;
+  padding: 8px;
+  cursor: pointer;
+}
+.nav-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  margin: 4px 0;
+  border-radius: 2px;
+  background: var(--c1);
+}
+
+@media (max-width: 768px) {
+  .site-nav {
+    height: 62px !important;
+    padding: 0 16px !important;
+  }
+  .site-nav > a:first-child img {
+    height: 42px !important;
+  }
+  .nav-toggle {
+    display: block;
+    margin-left: auto;
+  }
+  .site-nav .nav-links {
+    display: none !important;
+    position: absolute;
+    top: 62px;
+    left: 12px;
+    right: 12px;
+    flex-direction: column;
+    gap: 4px !important;
+    padding: 10px;
+    border: 1px solid var(--b2);
+    border-radius: 12px;
+    background: rgba(6, 13, 26, .98);
+    box-shadow: 0 14px 35px rgba(0,0,0,.35);
+  }
+  .site-nav .nav-links.open {
+    display: flex !important;
+  }
+  .site-nav .nav-links a {
+    padding: 12px 14px !important;
+  }
+  .nav-quote {
+    display: none;
+  }
+
+  .hero {
+    min-height: auto !important;
+    padding: 62px 16px 0 !important;
+  }
+  .hero-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 2rem !important;
+    padding: 3.5rem 0 2.5rem !important;
+  }
+  .hero-content,
+  .hero-visual {
+    min-width: 0 !important;
+    width: 100% !important;
+  }
+  .hero h1 {
+    font-size: clamp(3rem, 14vw, 4.3rem) !important;
+    line-height: .98 !important;
+  }
+  .hero-content > div:last-child {
+    gap: 1.25rem !important;
+    justify-content: space-between;
+  }
+  .hero-content > div:last-child > div {
+    flex: 1 1 65px;
+  }
+  .hero-visual > div:last-child > div {
+    padding: .9rem 1rem !important;
+  }
+
+  .services-section,
+  .about-section,
+  .process-section,
+  .contact-section {
+    padding: 4.5rem 16px !important;
+  }
+  .services-header,
+  .process-header,
+  .about-grid,
+  .contact-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 2rem !important;
+  }
+  .services-header,
+  .process-header {
+    margin-bottom: 2rem !important;
+  }
+  .services-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+  .about-grid {
+    gap: 2.5rem !important;
+  }
+  .process-list > div {
+    grid-template-columns: 42px minmax(0, 1fr) !important;
+    gap: 1rem !important;
+    padding: 1.35rem 1rem !important;
+  }
+  .process-list > div > div:last-child {
+    grid-column: 2;
+    justify-content: flex-start !important;
+  }
+  .process-phases {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+  .contact-name-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+  .contact-section .reveal > div:last-child {
+    padding: 1.5rem 1rem !important;
+  }
+  .site-footer {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    padding: 1.5rem 16px !important;
+  }
+  .site-footer > div {
+    flex-wrap: wrap;
+    gap: .8rem !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero h1 {
+    font-size: 2.75rem !important;
+  }
+  .hero-content > div:last-child > div {
+    flex-basis: 58px;
+  }
+  .hero-visual > div:last-child > div {
+    padding: .75rem .8rem !important;
+  }
+}
