@@ -194,3 +194,601 @@ a{text-decoration:none;color:inherit}
     padding: 2rem 0 !important;
   }
 }
+
+/* =========================================
+   FINAL RESPONSIVE FIX
+   ========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* =========================================
+   LAPTOP
+   ========================================= */
+
+@media (max-width: 1200px) {
+
+  .container {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+
+  /* Any 3-column layout becomes 2 columns */
+  .services-grid,
+  .service-grid,
+  .services-list,
+  .cards-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 768px) {
+
+  /* ---------- GENERAL ---------- */
+
+  section {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+
+  /* ---------- SERVICES ---------- */
+
+  .services-grid,
+  .service-grid,
+  .services-list,
+  .cards-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+
+  /* ---------- SERVICE CARDS ---------- */
+
+  .service-card,
+  .services-grid > *,
+  .service-grid > *,
+  .services-list > *,
+  .cards-grid > * {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+
+  /* ---------- ABOUT ---------- */
+
+  .about-grid,
+  .about-container,
+  .about-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+
+  /* If About uses a 2-column grid */
+  .about-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+
+  /* ---------- JOURNEY ---------- */
+
+  .journey,
+  .journey-grid,
+  .timeline,
+  .timeline-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+
+  /* ---------- FEATURES ---------- */
+
+  .features-grid,
+  .feature-grid {
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+
+  /* ---------- STATS ---------- */
+
+  .stats {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+
+  /* ---------- TEXT ---------- */
+
+  h1,
+  h2,
+  h3,
+  h4,
+  p {
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+
+  /* ---------- FLEX ELEMENTS ---------- */
+
+  .about-grid,
+  .about-container,
+  .services-header,
+  .section-header {
+    min-width: 0;
+  }
+
+}
+
+
+/* =========================================
+   SMALL PHONES
+   ========================================= */
+
+@media (max-width: 480px) {
+
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  h1 {
+    font-size: 38px !important;
+  }
+
+  h2 {
+    font-size: 30px !important;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+}
+
+/* =========================================================
+   FINAL MOBILE RESPONSIVE FIX
+   Put this at the VERY END of index.css
+   ========================================================= */
+
+/* Prevent every element from becoming wider than the screen */
+html,
+body,
+#root {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden !important;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Images/videos never overflow */
+img,
+video,
+svg,
+canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Flex/grid children are allowed to shrink */
+.container,
+.hero,
+.hero-container,
+.hero-content,
+.hero-visual,
+section,
+header,
+footer,
+nav,
+main,
+div {
+  min-width: 0;
+}
+
+/* Long text must wrap */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+button {
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+/* =========================================================
+   TABLET + MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden !important;
+  }
+
+  #root {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden !important;
+  }
+
+  /* Main containers */
+  .container {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  section {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  /* =======================================================
+     NAVBAR
+     ======================================================= */
+
+  nav,
+  header {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  /* Keep navbar content inside screen */
+  nav > div,
+  header > div {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  /* =======================================================
+     HERO
+     ======================================================= */
+
+  .hero {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    overflow: hidden !important;
+  }
+
+  .hero-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 30px !important;
+  }
+
+  .hero-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: none !important;
+  }
+
+  .hero-visual {
+    width: 100% !important;
+    max-width: 100% !important;
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;
+    margin: 0 !important;
+    flex: none !important;
+  }
+
+  .hero h1 {
+    width: 100% !important;
+    max-width: 100% !important;
+    font-size: clamp(34px, 10vw, 48px) !important;
+    line-height: 1.08 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .hero p {
+    width: 100% !important;
+    max-width: 100% !important;
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+  }
+
+  .hero-buttons {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 12px !important;
+  }
+
+  .hero-buttons a,
+  .hero-buttons button {
+    max-width: 100% !important;
+  }
+
+  /* =======================================================
+     GRIDS / CARDS
+     ======================================================= */
+
+  .grid,
+  .cards,
+  .services-grid,
+  .about-grid,
+  .process-grid,
+  .contact-grid {
+    width: 100% !important;
+    max-width: 100% !important;
+    grid-template-columns: 1fr !important;
+  }
+
+  .card,
+  .service-card,
+  .about-card,
+  .process-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  /* =======================================================
+     ALL COMMON FLEX CONTAINERS
+     ======================================================= */
+
+  .row,
+  .flex,
+  .section-content,
+  .about-content,
+  .services-content,
+  .process-content,
+  .contact-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  /* =======================================================
+     BUTTONS
+     ======================================================= */
+
+  button,
+  .btn,
+  .button {
+    max-width: 100%;
+  }
+
+  /* =======================================================
+     FORMS
+     ======================================================= */
+
+  input,
+  textarea,
+  select {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  form {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* =======================================================
+     TICKER
+     ======================================================= */
+
+  .ticker,
+  .ticker-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+  }
+
+  /* =======================================================
+     FOOTER
+     ======================================================= */
+
+  footer {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+  }
+
+  footer > div {
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  /* Footer columns stack */
+  footer .footer-grid,
+  footer .footer-content,
+  footer .footer-columns {
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* =======================================================
+     LARGE DECORATIVE ELEMENTS
+     ======================================================= */
+
+  .hero-visual *,
+  .hero-content *,
+  section * {
+    max-width: 100%;
+  }
+
+  /* Don't allow fixed-width elements to create overflow */
+  .hero-visual img,
+  .hero img,
+  section img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  .container {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .hero {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .hero-container {
+    gap: 24px !important;
+  }
+
+  .hero h1 {
+    font-size: 38px !important;
+    line-height: 1.08 !important;
+  }
+
+  .hero p {
+    font-size: 15px !important;
+    line-height: 1.55 !important;
+  }
+
+  .hero-buttons {
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+
+  .hero-buttons a,
+  .hero-buttons button {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+
+  /* Smaller section headings */
+  .sec-title {
+    font-size: 30px !important;
+    line-height: 1.15 !important;
+  }
+
+  .sec-sub {
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+  }
+
+  /* Prevent code/long strings from breaking layout */
+  pre,
+  code {
+    max-width: 100% !important;
+    overflow-x: auto !important;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+  .container,
+  .hero {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+  .hero h1 {
+    font-size: 34px !important;
+  }
+
+  .hero p {
+    font-size: 14px !important;
+  }
+
+  .sec-title {
+    font-size: 27px !important;
+  }
+}
