@@ -35,7 +35,7 @@ export default function Navbar() {
       transition:'background .3s'
     }}>
       <a href="#home" onClick={e=>{e.preventDefault();scrollTo('home')}} style={{display:'flex',alignItems:'center'}}>
-        <img src={LOGO} alt="Arnex Tech" style={{height:'50px',width:'auto',objectFit:'contain'}}/>
+        <img src={LOGO} alt="Aarnex Tech" style={{height:'50px',width:'auto',objectFit:'contain'}}/>
       </a>
 
       <ul style={{display:'flex',gap:'2px',listStyle:'none'}}>

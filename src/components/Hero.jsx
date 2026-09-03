@@ -74,7 +74,7 @@ export default function Hero() {
           </h1>
 
           <p style={{fontSize:'.97rem',color:'#9ab0cc',lineHeight:1.82,maxWidth:'520px',marginBottom:'2.4rem',fontWeight:300}}>
-            Arnex Tech engineers enterprise-grade software, cloud systems, and AI solutions — designed to scale, built to last, delivered on time.
+            Aarnex Tech engineers enterprise-grade software, cloud systems, and AI solutions — designed to scale, built to last, delivered on time.
           </p>
 
           <div style={{display:'flex',gap:'.8rem',flexWrap:'wrap',marginBottom:'4rem'}}>

@@ -1,4 +1,4 @@
-# Arnex Tech — React Website
+# Aarnex Tech — React Website
 
 ## 🚀 Setup & Run
 
@@ -16,7 +16,7 @@ npm run build
 ## 📁 Project Structure
 
 ```
-arnex-tech/
+aarnex-tech/
 ├── public/
 │   └── index.html
 ├── src/

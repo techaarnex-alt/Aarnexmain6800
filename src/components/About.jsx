@@ -30,10 +30,10 @@ export default function About() {
     <section id="about" ref={ref} style={{padding:'7rem 5%',background:'#060d1a'}}>
       <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'5rem',alignItems:'start'}}>
         <div className="reveal">
-          <div className="eyebrow">About Arnex</div>
+          <div className="eyebrow">About Aarnex</div>
           <h2 className="sec-title" style={{marginBottom:'1.2rem'}}>The Partner You Can<br/><span className="gr">Count On</span></h2>
           <p style={{fontSize:'.96rem',color:'#9ab0cc',lineHeight:1.88,marginBottom:'2rem',fontWeight:300}}>
-            Founded in 2017, Arnex Tech has grown from a boutique IT studio into a <strong style={{color:'#80e0ff',fontWeight:500}}>full-service technology partner</strong> serving enterprises across 12 countries. We combine deep engineering expertise with a <strong style={{color:'#80e0ff',fontWeight:500}}>client-first philosophy</strong> — delivering solutions built to last.
+            Founded in 2017, Aarnex Tech has grown from a boutique IT studio into a <strong style={{color:'#80e0ff',fontWeight:500}}>full-service technology partner</strong> serving enterprises across 12 countries. We combine deep engineering expertise with a <strong style={{color:'#80e0ff',fontWeight:500}}>client-first philosophy</strong> — delivering solutions built to last.
           </p>
           <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'1px',background:'rgba(0,200,255,.08)',border:'1px solid rgba(0,200,255,.08)',borderRadius:'18px',overflow:'hidden',marginBottom:'1.4rem'}}>
             {vals.map(v=>(

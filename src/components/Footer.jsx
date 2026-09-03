@@ -11,7 +11,7 @@ export default function Footer() {
   return (
     <footer style={{background:'#060d1a',borderTop:'1px solid rgba(0,200,255,.08)',padding:'1.8rem 5%',display:'flex',alignItems:'center',justifyContent:'space-between',flexWrap:'wrap',gap:'1.2rem'}}>
       <a href="#home" onClick={e=>{e.preventDefault();scrollTo('home')}} style={{display:'flex',alignItems:'center'}}>
-        <img src={LOGO} alt="Arnex Tech" style={{height:'32px',width:'auto',objectFit:'contain'}}/>
+        <img src={LOGO} alt="Aarnex Tech" style={{height:'32px',width:'auto',objectFit:'contain'}}/>
       </a>
       <div style={{display:'flex',gap:'1.4rem'}}>
         {links.map(l=>(
@@ -23,7 +23,7 @@ export default function Footer() {
           </a>
         ))}
       </div>
-      <small style={{fontSize:'.64rem',color:'#2a3a50'}}>© 2025 Arnex Tech Pvt. Ltd. All rights reserved.</small>
+      <small style={{fontSize:'.64rem',color:'#2a3a50'}}>© 2025 Aarnex Tech Pvt. Ltd. All rights reserved.</small>
     </footer>
   );
 }
