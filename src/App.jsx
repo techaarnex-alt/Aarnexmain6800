@@ -8,6 +8,7 @@ import {
 } from 'react-icons/fi';
 import { FaInstagram, FaWhatsapp, FaYoutube } from 'react-icons/fa';
 import logo from './assets/logo.png';
+import StarField from './components/StarField';
 
 const navItems = ['Home', 'Solutions', 'Industries', 'Products', 'Technology', 'Company'];
 const solutions = [
@@ -77,6 +78,7 @@ export default function App() {
   const navTarget = ['home', 'solutions', 'industries', 'solutions', 'technology', 'company'];
 
   return <main>
+    <StarField />
     <header className="site-header"><div className="nav-shell"><Brand /><nav className={`nav-links${menuOpen ? ' open' : ''}`}>{navItems.map((item, index) => <button key={item} onClick={() => jump(navTarget[index])} className={`nav-link${index === 0 ? ' selected' : ''}`}>{item}{index > 0 && <FiChevronDown />}</button>)}<button className="nav-contact" onClick={() => jump('contact')}>Contact Us</button></nav><button className="demo-button" onClick={() => jump('contact')}>Get a Demo <FiArrowRight /></button><button className="menu-toggle" aria-label="Toggle menu" onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? <FiX /> : <FiMenu />}</button></div></header>
 
     <section id="home" className="hero"><div className="hero-inner container"><div className="hero-copy"><span className="hero-chip"><i>✦</i> Aarnex Tech · Digital Transformation Partner</span><h1>Creating a <span>future-ready</span><br/>enterprise, today.</h1><p>We help ambitious organisations reimagine operations, customer experiences and growth through technology designed for what comes next.</p><div className="hero-buttons"><Button onClick={() => jump('solutions')}>Explore capabilities</Button><Button ghost onClick={() => jump('contact')}>Connect with us</Button></div></div><Dashboard /></div><div className="container proof-row"><Proof icon={FiGrid} value="50+" text="Projects Delivered"/><Proof icon={FiLayers} value="25+" text="Industries Served"/><Proof icon={FiCheck} value="10+" text="Years of Experience"/><Proof icon={FiActivity} value="24/7" text="Support Available"/></div></section>

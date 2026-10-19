@@ -46,3 +46,14 @@ body{background:#071936;color:#edf5ff}.hero{background:radial-gradient(circle at
 
 /* Final footer surface: exactly match the logo asset's navy background. */
 footer,.footer-brand,.footer-brand .brand{background:#0b1326}
+
+/* ===== Star-dot background ===== */
+.star-field{position:fixed;inset:0;width:100vw;height:100vh;z-index:0;pointer-events:none;display:block}
+main{position:relative;z-index:1}
+body{background:radial-gradient(ellipse at 20% 0,#0d2a5c 0,transparent 45%),radial-gradient(ellipse at 85% 100%,#08304f 0,transparent 45%),#050f24;background-attachment:fixed}
+/* let the stars show through the section backgrounds */
+.hero,.solutions,.industries,.technology,.projects,.bottom-section,.connect-section,.ai-section{background:transparent}
+.industries,.projects{background:rgba(10,29,65,.35)}
+.proof-row{background:rgba(10,32,69,.72)}
+footer{background:rgba(5,20,46,.82)}
+.footer-brand,.footer-brand .brand{background:transparent}
